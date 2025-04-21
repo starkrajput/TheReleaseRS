@@ -1,0 +1,63 @@
+/* SoftwareApp.css */
+.software-app-container {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #333;
+}
+
+    /* Custom styling for Software App page */
+    .software-app-container .vs-card-title {
+        color: #6a3093;
+    }
+
+    .software-app-container .vs-card-button {
+        background: linear-gradient(90deg, #6a3093 0%, #a044ff 100%);
+    }
+
+        .software-app-container .vs-card-button:hover {
+            background: linear-gradient(90deg, #a044ff 0%, #6a3093 100%);
+        }
+
+    .software-app-container .vs-title-underline,
+    .software-app-container .cs-title-underline,
+    .software-app-container .ov-title-underline,
+    .software-app-container .sc-title-underline {
+        background: linear-gradient(90deg, #6a3093 0%, #a044ff 100%);
+    }
+
+    .software-app-container .cs-date-badge {
+        background: linear-gradient(90deg, #6a3093 0%, #a044ff 100%);
+    }
+
+    .software-app-container .cs-card-link,
+    .software-app-container .sc-article-link {
+        color: #6a3093;
+    }
+
+        .software-app-container .cs-card-link:hover,
+        .software-app-container .sc-article-link:hover {
+            color: #a044ff;
+        }
+
+    .software-app-container .ov-card-hover-content {
+        background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%);
+    }
+
+/* Scroll animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

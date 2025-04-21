@@ -1,0 +1,214 @@
+.ai-solutions-banner {
+   /* background-image: url('../../assets/Vedio/A2.jpg');*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+    .ai-solutions-banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+.ai-banner-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top:auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Side: Text Content */
+.ai-banner-text {
+    flex: 1;
+    padding: 40px;
+    color: white;
+    max-width: 600px;
+}
+
+.ai-banner-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.ai-banner-subtitle {
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.ai-explore-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+    background: linear-gradient(90deg, rgba(2, 0, 25, 1) 19%, rgba(0, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(106, 58, 255, 0.4);
+}
+
+    .ai-explore-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(106, 58, 255, 0.6);
+    }
+
+/* Right Side: Contact Form */
+.ai-banner-form {
+    flex: 0 0 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.ai-form-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.ai-inquiry-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-form-input,
+.ai-form-textarea {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+    .ai-form-input:focus,
+    .ai-form-textarea:focus {
+        border-color: #4e9eff;
+        outline: none;
+    }
+
+.ai-form-textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.ai-captcha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ai-captcha-question {
+    margin-right: 10px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.ai-captcha-input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.ai-submit-btn {
+    padding: 14px;
+    font-size: 1rem;
+    background: linear-gradient(90deg, rgba(2, 0, 25, 1) 19%, rgba(0, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+    .ai-submit-btn:hover {
+        background: linear-gradient(90deg, rgba(2, 0, 25, 1) 19%, rgba(0, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .ai-banner-content {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .ai-banner-title {
+        font-size: 3rem;
+    }
+
+    .ai-banner-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-solutions-banner {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .ai-banner-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ai-banner-text {
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .ai-banner-title {
+        font-size: 2.5rem;
+    }
+
+    .ai-banner-form {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ai-banner-title {
+        font-size: 2rem;
+    }
+
+    .ai-banner-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .ai-explore-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}

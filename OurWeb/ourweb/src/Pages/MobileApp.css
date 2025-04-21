@@ -1,0 +1,63 @@
+/* MobileApp.css */
+.mobile-app-container {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #333;
+}
+
+    /* Custom styling for Mobile App page */
+    .mobile-app-container .vs-card-title {
+        color: #ff6b6b;
+    }
+
+    .mobile-app-container .vs-card-button {
+        background: linear-gradient(90deg, #ff6b6b 0%, #ff8e8e 100%);
+    }
+
+        .mobile-app-container .vs-card-button:hover {
+            background: linear-gradient(90deg, #ff8e8e 0%, #ff6b6b 100%);
+        }
+
+    .mobile-app-container .vs-title-underline,
+    .mobile-app-container .cs-title-underline,
+    .mobile-app-container .ov-title-underline,
+    .mobile-app-container .sc-title-underline {
+        background: linear-gradient(90deg, #ff6b6b 0%, #ff8e8e 100%);
+    }
+
+    .mobile-app-container .cs-date-badge {
+        background: linear-gradient(90deg, #ff6b6b 0%, #ff8e8e 100%);
+    }
+
+    .mobile-app-container .cs-card-link,
+    .mobile-app-container .sc-article-link {
+        color: #ff6b6b;
+    }
+
+        .mobile-app-container .cs-card-link:hover,
+        .mobile-app-container .sc-article-link:hover {
+            color: #ff8e8e;
+        }
+
+    .mobile-app-container .ov-card-hover-content {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    }
+
+/* Scroll animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

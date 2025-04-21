@@ -1,0 +1,63 @@
+/* WebApp.css */
+.web-app-container {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #333;
+}
+
+    /* Custom styling for Web App page */
+    .web-app-container .vs-card-title {
+        color: #3a7bd5;
+    }
+
+    .web-app-container .vs-card-button {
+        background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    }
+
+        .web-app-container .vs-card-button:hover {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+        }
+
+    .web-app-container .vs-title-underline,
+    .web-app-container .cs-title-underline,
+    .web-app-container .ov-title-underline,
+    .web-app-container .sc-title-underline {
+        background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    }
+
+    .web-app-container .cs-date-badge {
+        background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    }
+
+    .web-app-container .cs-card-link,
+    .web-app-container .sc-article-link {
+        color: #3a7bd5;
+    }
+
+        .web-app-container .cs-card-link:hover,
+        .web-app-container .sc-article-link:hover {
+            color: #00d2ff;
+        }
+
+    .web-app-container .ov-card-hover-content {
+        background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+    }
+
+/* Scroll animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

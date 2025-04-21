@@ -1,0 +1,182 @@
+/* ServicesCatalog.css */
+.services-catalog {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.services-catalog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-catalog-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.services-catalog-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-catalog-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.services-catalog-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .services-catalog-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .services-catalog-section.odd {
+        flex-direction: row-reverse;
+    }
+
+.services-section-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.services-section-heading {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.services-section-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.services-section-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.services-primary-button,
+.services-secondary-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services-primary-button {
+    background-color: #4a90e2;
+    color: white;
+}
+
+    .services-primary-button:hover {
+        background-color: #3a80d2;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.services-secondary-button {
+    background-color: transparent;
+    color: #4a90e2;
+    border: 1px solid #4a90e2;
+}
+
+    .services-secondary-button:hover {
+        background-color: rgba(74, 144, 226, 0.1);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+.services-section-image {
+    flex: 1;
+    height: 350px;
+    overflow: hidden;
+}
+
+    .services-section-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+.services-catalog-section:hover .services-section-image img {
+    transform: scale(1.05);
+}
+
+/* Type-specific styling */
+.ml-services-catalog .services-primary-button {
+    background-color: #4a90e2;
+}
+
+.iot-services-catalog .services-primary-button {
+    background-color: #27ae60;
+}
+
+.saas-services-catalog .services-primary-button {
+    background-color: #9b59b6;
+}
+
+.managed-services-catalog .services-primary-button {
+    background-color: #e67e22;
+}
+
+.ondemand-services-catalog .services-primary-button {
+    background-color: #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .services-catalog-section,
+    .services-catalog-section.odd {
+        flex-direction: column;
+    }
+
+    .services-section-content,
+    .services-section-image {
+        width: 100%;
+    }
+
+    .services-section-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-catalog {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .services-catalog-title {
+        font-size: 1.8rem;
+    }
+
+    .services-section-buttons {
+        flex-direction: column;
+    }
+
+    .services-primary-button,
+    .services-secondary-button {
+        width: 100%;
+        text-align: center;
+    }
+}

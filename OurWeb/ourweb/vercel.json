@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/webapp",
+      "dest": "/"
+    },
+    {
+      "src": "/mobileapp",
+      "dest": "/"
+    },
+    {
+      "src": "/softwareapp",
+      "dest": "/"
+    }
+  ]
+}

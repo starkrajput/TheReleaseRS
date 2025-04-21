@@ -1,0 +1,125 @@
+﻿.parent-child2-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+    .service-tabs button {
+        background: none;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        color: #666;
+        transition: color 0.3s ease;
+    }
+
+        .service-tabs button.active {
+            color: #4254f4;
+            border-bottom: 2px solid #4254f4;
+        }
+
+.service-content {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .service-content.active {
+        display: flex;
+    }
+
+.service-info {
+    flex-basis: 60%;
+    padding-right: 2rem;
+}
+
+    .service-info h2 {
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .service-info p {
+        color: #666;
+        margin-bottom: 1rem;
+    }
+
+    .service-info ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .service-info li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+        .service-info li::before {
+            content: '✓';
+            color: #4254f4;
+            position: absolute;
+            left: 0;
+        }
+
+.get-started {
+    background-color: #4254f4;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .get-started:hover {
+        background-color: #3244d4;
+    }
+
+.service-image {
+    flex-basis: 40%;
+}
+
+    .service-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+@media (max-width: 768px) {
+    .service-content {
+        flex-direction: column;
+    }
+
+    .service-info, .service-image {
+        flex-basis: 100%;
+        padding-right: 0;
+    }
+
+    .service-image {
+        margin-top: 2rem;
+    }
+}

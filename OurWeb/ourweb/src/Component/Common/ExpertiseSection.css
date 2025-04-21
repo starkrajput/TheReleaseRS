@@ -1,0 +1,198 @@
+/* ExpertiseSection.css */
+.expertise-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.expertise-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.expertise-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.expertise-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.expertise-content {
+    display: flex;
+    gap: 3rem;
+}
+
+.expertise-reasons {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.expertise-reason-card {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .expertise-reason-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+.reason-icon {
+    color: #4a90e2;
+    margin-top: 0.2rem;
+}
+
+.reason-content {
+    flex: 1;
+}
+
+.reason-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.reason-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.expertise-inquiry {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.inquiry-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.expertise-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.expertise-form-input,
+.expertise-form-textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.expertise-form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.expertise-submit-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+    .expertise-submit-btn:hover {
+        background-color: #3a80d2;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Type-specific styling */
+.ml-expertise-section .reason-icon {
+    color: #4a90e2;
+}
+
+.ml-expertise-section .expertise-submit-btn {
+    background-color: #4a90e2;
+}
+
+.iot-expertise-section .reason-icon {
+    color: #27ae60;
+}
+
+.iot-expertise-section .expertise-submit-btn {
+    background-color: #27ae60;
+}
+
+.saas-expertise-section .reason-icon {
+    color: #9b59b6;
+}
+
+.saas-expertise-section .expertise-submit-btn {
+    background-color: #9b59b6;
+}
+
+.managed-expertise-section .reason-icon {
+    color: #e67e22;
+}
+
+.managed-expertise-section .expertise-submit-btn {
+    background-color: #e67e22;
+}
+
+.ondemand-expertise-section .reason-icon {
+    color: #3498db;
+}
+
+.ondemand-expertise-section .expertise-submit-btn {
+    background-color: #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .expertise-content {
+        flex-direction: column;
+    }
+
+    .expertise-reasons,
+    .expertise-inquiry {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .expertise-section {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .expertise-title {
+        font-size: 1.8rem;
+    }
+
+    .expertise-reason-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .reason-icon {
+        margin-bottom: 0.5rem;
+    }
+}

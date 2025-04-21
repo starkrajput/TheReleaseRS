@@ -1,0 +1,140 @@
+/* GrowthStats.css */
+.growth-stats {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 3rem 2rem;
+}
+
+.growth-stats-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.growth-stats-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.growth-stats-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.growth-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.growth-stat-card {
+    text-align: center;
+}
+
+.stat-chart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+}
+
+.stat-circle {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.stat-circle-bg {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 8;
+}
+
+.stat-circle-progress {
+    fill: none;
+    stroke: #4a90e2;
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.stat-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: baseline;
+}
+
+.stat-symbol {
+    font-size: 1rem;
+    margin-left: 2px;
+}
+
+.stat-title {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.stat-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Type-specific styling */
+.ml-growth-stats .stat-circle-progress {
+    stroke: #4a90e2;
+}
+
+.iot-growth-stats .stat-circle-progress {
+    stroke: #27ae60;
+}
+
+.saas-growth-stats .stat-circle-progress {
+    stroke: #9b59b6;
+}
+
+.managed-growth-stats .stat-circle-progress {
+    stroke: #e67e22;
+}
+
+.ondemand-growth-stats .stat-circle-progress {
+    stroke: #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .growth-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .growth-stats {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+    }
+
+    .growth-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .growth-stats-title {
+        font-size: 1.8rem;
+    }
+
+    .stat-chart {
+        width: 120px;
+        height: 120px;
+    }
+}

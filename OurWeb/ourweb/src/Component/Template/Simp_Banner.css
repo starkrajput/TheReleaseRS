@@ -1,0 +1,216 @@
+/* Simp_Banner.css */
+.simpai-banner-wrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+    .simpai-banner-wrapper.banner-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.simpai-banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.simpai-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.simpai-carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+}
+
+    .simpai-carousel-item.simpai-active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .simpai-carousel-item.simpai-transitioning {
+        opacity: 0.5;
+    }
+
+.simpai-carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 8s ease-in-out;
+}
+
+.simpai-carousel-item.simpai-active .simpai-carousel-image {
+    transform: scale(1.05);
+}
+
+.simpai-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.simpai-carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    padding: 20px;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.simpai-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.2s;
+}
+
+.simpai-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.4s;
+}
+
+.simpai-cta-button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.6s;
+}
+
+    .simpai-cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+    }
+
+.simpai-button-arrow {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.simpai-cta-button:hover .simpai-button-arrow {
+    transform: translateX(5px);
+}
+
+.simpai-carousel-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 2;
+}
+
+.simpai-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .simpai-indicator.simpai-active {
+        background-color: white;
+        transform: scale(1.2);
+    }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .simpai-title {
+        font-size: 2.8rem;
+    }
+
+    .simpai-description {
+        font-size: 1.1rem;
+    }
+
+    .simpai-carousel-content {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .simpai-title {
+        font-size: 2.2rem;
+    }
+
+    .simpai-description {
+        font-size: 1rem;
+    }
+
+    .simpai-carousel-content {
+        max-width: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .simpai-cta-button {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .simpai-title {
+        font-size: 1.8rem;
+    }
+
+    .simpai-banner {
+        height: 80vh;
+    }
+}

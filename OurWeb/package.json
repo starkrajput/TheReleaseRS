@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@react-three/drei": "^9.112.0",
+    "@react-three/fiber": "^8.17.7",
+    "emailjs-com": "^3.2.0",
+    "FontLoader": "^0.0.2",
+    "lucide-react": "^0.439.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.9",
+    "three": "^0.168.0"
+  }
+}

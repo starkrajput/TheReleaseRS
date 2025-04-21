@@ -1,0 +1,244 @@
+/* VerticalSection.css */
+.vs-section-wrapper {
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+    .vs-section-wrapper.vs-in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.vs-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.vs-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.vs-title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.vs-card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.vs-card {
+    display: flex;
+    margin-bottom: 80px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+    .vs-card.vs-in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .vs-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+.vs-card-reverse {
+    flex-direction: row-reverse;
+}
+
+.vs-image-container {
+    flex: 0 0 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.vs-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.vs-card:hover .vs-card-image {
+    transform: scale(1.05);
+}
+
+.vs-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.vs-card:hover .vs-image-overlay {
+    opacity: 1;
+}
+
+.vs-overlay-content {
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.vs-card:hover .vs-overlay-content {
+    transform: translateY(0);
+}
+
+.vs-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.vs-card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+    .vs-card-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    }
+
+.vs-card-reverse .vs-card-title::after {
+    left: auto;
+    right: 0;
+}
+
+.vs-card-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.vs-card-button {
+    align-self: flex-start;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3);
+}
+
+    .vs-card-button:hover {
+        background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 7px 20px rgba(58, 123, 213, 0.4);
+    }
+
+.vs-button-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.vs-card-button:hover .vs-button-icon {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .vs-section-title {
+        font-size: 2.2rem;
+    }
+
+    .vs-card-title {
+        font-size: 1.6rem;
+    }
+
+    .vs-content {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vs-card, .vs-card-reverse {
+        flex-direction: column;
+    }
+
+    .vs-image-container {
+        height: 250px;
+    }
+
+    .vs-section-title {
+        font-size: 2rem;
+    }
+
+    .vs-card-title {
+        font-size: 1.5rem;
+    }
+
+    .vs-card-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .vs-section-wrapper {
+        padding: 60px 0;
+    }
+
+    .vs-section-title {
+        font-size: 1.8rem;
+    }
+
+    .vs-card-title {
+        font-size: 1.4rem;
+    }
+
+    .vs-content {
+        padding: 25px;
+    }
+}

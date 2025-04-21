@@ -1,0 +1,470 @@
+/* Section2.css */
+.ai-solutions-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #010136 0%, #050533 50%, #010124 100%);
+    color: white;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+    .ai-solutions-section.ai-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.ai-solutions-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ai-solutions-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ai-solutions-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ai-solutions-subtitle {
+    font-size: 1.2rem;
+    color: #b8c6db;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.ai-solutions-content {
+    display: flex;
+    gap: 50px;
+}
+
+/* Staircase Styles */
+.ai-staircase {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.ai-step {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    max-width: 500px;
+}
+
+    .ai-step.ai-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+/* Staircase positioning */
+.ai-step-1 {
+    margin-left: 0;
+    transition-delay: 0.1s;
+}
+
+.ai-step-2 {
+    margin-left: 40px;
+    transition-delay: 0.2s;
+}
+
+.ai-step-3 {
+    margin-left: 80px;
+    transition-delay: 0.3s;
+}
+
+.ai-step-4 {
+    margin-left: 120px;
+    transition-delay: 0.4s;
+}
+
+.ai-step-5 {
+    margin-left: 160px;
+    transition-delay: 0.5s;
+}
+
+.ai-step-6 {
+    margin-left: 200px;
+    transition-delay: 0.6s;
+}
+
+.ai-step-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    background: rgba(21, 32, 67, 0.8);
+    border: 2px solid rgba(78, 158, 255, 0.3);
+    height: 250px;
+}
+
+    .ai-step-card:hover {
+        transform: translateY(-10px) translateX(5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(78, 158, 255, 0.2);
+        border-color: rgba(78, 158, 255, 0.6);
+    }
+
+.ai-step-content {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.ai-step-card:hover .ai-step-content {
+    background: linear-gradient(0deg, rgba(21, 32, 67, 0.95) 0%, rgba(21, 32, 67, 0.8) 100%);
+    padding-bottom: 30px;
+}
+
+.ai-step-heading {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.ai-step-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    color: #b8c6db;
+    transition: all 0.3s ease;
+}
+
+.ai-step-card:hover .ai-step-description {
+    opacity: 0.9;
+    height: auto;
+}
+
+.ai-step-link {
+    color: #4e9eff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.ai-step-card:hover .ai-step-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ai-step-link:hover {
+    color: #6a3aff;
+    text-decoration: underline;
+}
+
+.ai-step-image-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ai-step-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.ai-step-card:hover .ai-step-image {
+    transform: scale(1.1);
+}
+
+/* Developer Profile Styles */
+.ai-dev-profile {
+    flex: 0 0 350px;
+    background: rgba(21, 32, 67, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(78, 158, 255, 0.2);
+    border: 2px solid rgba(78, 158, 255, 0.4);
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.7s;
+    align-self: center;
+    position: sticky;
+    top: 100px;
+}
+
+    .ai-dev-profile.ai-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+.ai-dev-avatar {
+    margin-bottom: 20px;
+}
+
+.ai-dev-avatar-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4e9eff 0%, #6a3aff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    box-shadow: 0 0 30px rgba(78, 158, 255, 0.5);
+    animation: ai-pulse-glow 2s infinite;
+}
+
+@keyframes ai-pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(78, 158, 255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(78, 158, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(78, 158, 255, 0);
+    }
+}
+
+.ai-dev-info {
+    text-align: center;
+}
+
+    .ai-dev-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .ai-dev-info p {
+        font-size: 1.1rem;
+        color: #b8c6db;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+.ai-dev-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+    .ai-dev-skills span {
+        background: rgba(78, 158, 255, 0.2);
+        color: #4e9eff;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid rgba(78, 158, 255, 0.3);
+    }
+
+.ai-dev-contact-btn {
+    background: linear-gradient(90deg, #4e9eff, #6a3aff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(78, 158, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+    .ai-dev-contact-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: all 0.6s ease;
+    }
+
+    .ai-dev-contact-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(78, 158, 255, 0.5);
+    }
+
+        .ai-dev-contact-btn:hover::before {
+            left: 100%;
+        }
+
+    .ai-dev-contact-btn i {
+        transition: transform 0.3s ease;
+    }
+
+    .ai-dev-contact-btn:hover i {
+        transform: translateX(5px);
+    }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .ai-solutions-content {
+        flex-direction: column;
+    }
+
+    .ai-dev-profile {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 40px auto 0;
+        position: static;
+    }
+
+    .ai-step-6 {
+        margin-left: 150px;
+    }
+
+    .ai-step-5 {
+        margin-left: 120px;
+    }
+
+    .ai-step-4 {
+        margin-left: 90px;
+    }
+
+    .ai-step-3 {
+        margin-left: 60px;
+    }
+
+    .ai-step-2 {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ai-solutions-title {
+        font-size: 2.2rem;
+    }
+
+    .ai-step {
+        max-width: 450px;
+    }
+
+    .ai-step-6 {
+        margin-left: 100px;
+    }
+
+    .ai-step-5 {
+        margin-left: 80px;
+    }
+
+    .ai-step-4 {
+        margin-left: 60px;
+    }
+
+    .ai-step-3 {
+        margin-left: 40px;
+    }
+
+    .ai-step-2 {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-solutions-section {
+        padding: 60px 0;
+    }
+
+    .ai-solutions-title {
+        font-size: 2rem;
+    }
+
+    .ai-solutions-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .ai-step {
+        max-width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .ai-step-card {
+        height: 200px;
+    }
+
+    .ai-dev-profile {
+        padding: 20px;
+    }
+
+    .ai-dev-avatar-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+
+    .ai-dev-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .ai-dev-info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ai-solutions-title {
+        font-size: 1.8rem;
+    }
+
+    .ai-solutions-subtitle {
+        font-size: 1rem;
+    }
+
+    .ai-step-heading {
+        font-size: 1.2rem;
+    }
+
+    .ai-step-description {
+        font-size: 0.9rem;
+    }
+
+    .ai-step-card {
+        height: 180px;
+    }
+
+    .ai-dev-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .ai-dev-contact-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

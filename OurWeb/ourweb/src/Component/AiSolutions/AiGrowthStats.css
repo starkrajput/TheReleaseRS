@@ -1,0 +1,143 @@
+.ai-growth-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+}
+
+.ai-growth-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ai-growth-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.ai-stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+    .ai-stats-container.ai-animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.ai-stat-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+    .ai-stat-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+.ai-circle-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+.ai-circular-chart {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ai-circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.ai-circle {
+    fill: none;
+    stroke: url(#ai-gradient);
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.ai-percentage {
+    fill: #4e9eff;
+    font-size: 0.5em;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+.ai-stat-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.ai-stat-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Add gradient definition for the circle */
+.ai-circular-chart defs {
+    position: absolute;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .ai-growth-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-growth-container {
+        padding: 60px 0;
+    }
+
+    .ai-growth-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .ai-stat-card {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .ai-growth-title {
+        font-size: 1.8rem;
+    }
+
+    .ai-stat-title {
+        font-size: 1.3rem;
+    }
+
+    .ai-stat-description {
+        font-size: 0.9rem;
+    }
+
+    .ai-circle-container {
+        width: 120px;
+        height: 120px;
+    }
+}

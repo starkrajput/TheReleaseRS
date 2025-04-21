@@ -1,0 +1,221 @@
+/* SimpleCard.css */
+.sc-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+    .sc-section.sc-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.sc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sc-title-container {
+    text-align: center;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+    .sc-title-container.sc-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.sc-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.sc-title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.sc-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.sc-article {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+    .sc-article.sc-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .sc-article:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+.sc-article-image-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.sc-article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.sc-article:hover .sc-article-image {
+    transform: scale(1.1);
+}
+
+.sc-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.sc-article:hover .sc-image-overlay {
+    opacity: 1;
+}
+
+.sc-overlay-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+    .sc-overlay-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke: #3a7bd5;
+        stroke-width: 2;
+        fill: none;
+    }
+
+.sc-article:hover .sc-overlay-icon {
+    transform: translateY(0);
+}
+
+.sc-article-content {
+    padding: 30px;
+}
+
+.sc-article-heading {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.sc-article-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sc-article-link {
+    display: inline-flex;
+    align-items: center;
+    color: #3a7bd5;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+    .sc-article-link:hover {
+        color: #00d2ff;
+    }
+
+.sc-link-arrow {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    transition: transform 0.3s ease;
+}
+
+.sc-article-link:hover .sc-link-arrow {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .sc-title {
+        font-size: 2.2rem;
+    }
+
+    .sc-articles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .sc-section {
+        padding: 80px 0;
+    }
+
+    .sc-title {
+        font-size: 2rem;
+    }
+
+    .sc-article-heading {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sc-section {
+        padding: 60px 0;
+    }
+
+    .sc-title {
+        font-size: 1.8rem;
+    }
+
+    .sc-articles-grid {
+        grid-template-columns: 1fr;
+    }
+}

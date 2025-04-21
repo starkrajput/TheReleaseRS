@@ -1,0 +1,167 @@
+.ai-services-catalog {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.ai-catalog-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ai-catalog-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.ai-catalog-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.ai-catalog-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 40px;
+}
+
+    .ai-catalog-section.ai-odd {
+        flex-direction: row-reverse;
+    }
+
+.ai-catalog-content {
+    flex: 1;
+}
+
+.ai-section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.ai-section-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.ai-catalog-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ai-primary-btn, .ai-secondary-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.ai-primary-btn {
+    background: linear-gradient(90deg, #4e9eff 0%, #6a3aff 100%);
+    color: white;
+    border: none;
+}
+
+    .ai-primary-btn:hover {
+        box-shadow: 0 5px 15px rgba(106, 58, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+.ai-secondary-btn {
+    background: transparent;
+    color: #4e9eff;
+    border: 2px solid #4e9eff;
+}
+
+    .ai-secondary-btn:hover {
+        background: rgba(78, 158, 255, 0.1);
+    }
+
+.ai-catalog-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ai-service-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+    .ai-service-img:hover {
+        transform: scale(1.03);
+    }
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .ai-catalog-title {
+        font-size: 2.2rem;
+    }
+
+    .ai-section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-catalog-section,
+    .ai-catalog-section.ai-odd {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .ai-catalog-content {
+        text-align: center;
+    }
+
+    .ai-catalog-buttons {
+        justify-content: center;
+    }
+
+    .ai-catalog-title {
+        font-size: 2rem;
+    }
+
+    .ai-section-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ai-catalog-title {
+        font-size: 1.8rem;
+    }
+
+    .ai-catalog-subtitle {
+        font-size: 1rem;
+    }
+
+    .ai-section-title {
+        font-size: 1.4rem;
+    }
+
+    .ai-section-description {
+        font-size: 1rem;
+    }
+
+    .ai-primary-btn, .ai-secondary-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,185 @@
+/* CaseStudy.css */
+.case-study {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.case-study-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.case-study-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.case-study-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.case-study-content {
+    display: flex;
+    gap: 3rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.case-study-image {
+    flex: 1;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+    .case-study-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+.case-study-content:hover .case-study-image img {
+    transform: scale(1.05);
+}
+
+.case-study-details {
+    flex: 1;
+    padding: 2rem;
+}
+
+.case-study-name {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.case-study-description {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.case-study-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.case-study-feature {
+    display: flex;
+    gap: 1rem;
+}
+
+.feature-icon {
+    color: #4a90e2;
+    margin-top: 0.2rem;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.case-study-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .case-study-button:hover {
+        background-color: #3a80d2;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Type-specific styling */
+.ml-case-study .feature-icon {
+    color: #4a90e2;
+}
+
+.ml-case-study .case-study-button {
+    background-color: #4a90e2;
+}
+
+.iot-case-study .feature-icon {
+    color: #27ae60;
+}
+
+.iot-case-study .case-study-button {
+    background-color: #27ae60;
+}
+
+.saas-case-study .feature-icon {
+    color: #9b59b6;
+}
+
+.saas-case-study .case-study-button {
+    background-color: #9b59b6;
+}
+
+.managed-case-study .feature-icon {
+    color: #e67e22;
+}
+
+.managed-case-study .case-study-button {
+    background-color: #e67e22;
+}
+
+.ondemand-case-study .feature-icon {
+    color: #3498db;
+}
+
+.ondemand-case-study .case-study-button {
+    background-color: #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .case-study-content {
+        flex-direction: column;
+    }
+
+    .case-study-image {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .case-study {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .case-study-title {
+        font-size: 1.8rem;
+    }
+
+    .case-study-name {
+        font-size: 1.5rem;
+    }
+}
